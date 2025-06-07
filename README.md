@@ -1,17 +1,17 @@
 # razor-poc-ai-github
 
-A simple Hello World project built with Nuxt 3 and Tailwind CSS.
+A modern Hello World project built with Nuxt 3 and Tailwind CSS.
 
 ## Features
 
-- Built on [Nuxt 3](https://nuxt.com/) for server-side rendering, file-based routing, and enhanced developer experience
-- Clean, modern design using [Tailwind CSS](https://tailwindcss.com/) via Nuxt module integration
-- Responsive layout out of the box
-- Component-based architecture with reusable Vue 3 components
-- Hot module replacement (HMR) for instant feedback during development
-- Built-in support for composables and the Vue 3 Composition API
-- Easy route generation and layouts with Nuxt 3 conventions
-- Efficient development workflows tailored for Nuxt 3
+- **Powered by [Nuxt 3](https://nuxt.com/):** Enjoy server-side rendering, file-based routing, and a streamlined developer experience.
+- **Tailwind CSS Integration:** Effortless styling with [Tailwind CSS](https://tailwindcss.com/) via Nuxt module.
+- **Responsive Design:** Mobile-friendly layouts out of the box.
+- **Component-Based Architecture:** Leverage reusable Vue 3 components.
+- **Hot Module Replacement (HMR):** Instant feedback during development.
+- **Automatic Routing & Layouts:** Nuxt 3 conventions for pages and layouts.
+- **Vue 3 Composition API:** Use composables for reusable logic—auto-imported by Nuxt 3.
+- **Efficient Workflows:** Optimized build, development, and deployment processes tailored for Nuxt 3.
 
 ## Setup
 
@@ -42,12 +42,13 @@ A simple Hello World project built with Nuxt 3 and Tailwind CSS.
 
 ## Usage Guidelines
 
-- **Pages:** Add new pages by creating `.vue` files in the `pages/` directory. Nuxt 3 automatically generates routes based on the file structure.
-- **Components:** Place reusable Vue components in the `components/` directory. These can be used anywhere in your pages or layouts, leveraging Nuxt 3's auto-import feature.
-- **Composables:** For reusable logic, add composable functions to the `composables/` directory. These utilize the Vue 3 Composition API and are auto-imported by Nuxt 3.
-- **Layouts:** Customize your app's structure by editing or adding layouts in the `layouts/` directory. Specify layouts in your page components with the `definePageMeta` function.
-- **Configuration:** Manage Nuxt modules, plugins, and runtime settings in `nuxt.config.ts`. Tailwind CSS is integrated as a Nuxt module, so additional Tailwind configuration can be handled here or in a separate `tailwind.config.js` file.
-- **Build for Production:** Generate and preview a production build with:
+- **Pages:** Create new pages by adding `.vue` files in the `pages/` directory. Nuxt 3 automatically generates routes based on file structure.
+- **Components:** Place reusable Vue components in the `components/` directory. Nuxt 3 auto-imports these across your project.
+- **Composables:** For reusable logic, add functions to the `composables/` directory (auto-imported, leveraging the Vue 3 Composition API).
+- **Layouts:** Customize app structure by modifying or adding layouts in the `layouts/` directory. Assign a layout in a page component using the `definePageMeta` function.
+- **Configuration:** Manage Nuxt modules, plugins, and runtime settings in `nuxt.config.ts`. Tailwind CSS is integrated as a Nuxt module; customize via `tailwind.config.js` if needed.
+- **Environment Variables:** Add environment variables in a `.env` file. Nuxt 3 reads these automatically and exposes them via `useRuntimeConfig()`.
+- **Production Build:** Generate and preview a production build with:
 
   ```bash
   npm run build
@@ -58,9 +59,9 @@ A simple Hello World project built with Nuxt 3 and Tailwind CSS.
 
 ## Technologies Used
 
-- [Nuxt 3](https://nuxt.com/) (Vue 3 framework with server-side rendering and file-based routing)
+- [Nuxt 3](https://nuxt.com/) — Vue 3 framework with server-side rendering and file-based routing
 - [Vue 3](https://vuejs.org/)
-- [Tailwind CSS](https://tailwindcss.com/) (integrated via Nuxt module)
+- [Tailwind CSS](https://tailwindcss.com/) — integrated via Nuxt module
 - [Node.js](https://nodejs.org/)
 
 ## Project Structure
@@ -84,19 +85,19 @@ A simple Hello World project built with Nuxt 3 and Tailwind CSS.
 └── tsconfig.json
 ```
 
-- `components/`: Reusable Vue components (auto-imported)
-- `composables/`: Utility functions and composables for Vue 3 Composition API (auto-imported)
-- `layouts/`: Layout components for page structure
-- `pages/`: Page components mapped to routes
+- `components/`: Reusable Vue 3 components (auto-imported)
+- `composables/`: Reusable logic and Vue 3 Composition API functions (auto-imported)
+- `layouts/`: Layout components for consistent page structure
+- `pages/`: Route-mapped page components
 - `nuxt.config.ts`: Nuxt 3 configuration file
-- `app.vue`: Root Vue component for global app structure
-- `tailwind.config.js`: Tailwind CSS configuration (if custom config is needed)
-- `tsconfig.json`: TypeScript configuration (Nuxt 3 supports TypeScript out of the box)
+- `app.vue`: Root Vue component for global structure
+- `tailwind.config.js`: Tailwind CSS configuration (customize if needed)
+- `tsconfig.json`: TypeScript configuration (Nuxt 3 supports TypeScript by default)
 
 ## Configuration
 
-- **Nuxt 3 Configuration:** All Nuxt modules, plugins, and runtime configuration should be managed in `nuxt.config.ts`. Tailwind CSS is added via the Nuxt module. If you need to customize Tailwind, use `tailwind.config.js`.
-- **Environment Variables:** Place environment variables in a `.env` file or configure them in `nuxt.config.ts` under `runtimeConfig`.
+- **Nuxt 3 Config:** All Nuxt modules, plugins, and runtime configuration are managed in `nuxt.config.ts`. Tailwind CSS is included as a Nuxt module. For further Tailwind customization, use `tailwind.config.js`.
+- **Environment Variables:** Use a `.env` file to manage sensitive or environment-specific variables. Access them in code via Nuxt's `useRuntimeConfig()` composable or `runtimeConfig` in `nuxt.config.ts`.
 
 ## Contributing
 
