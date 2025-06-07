@@ -4,12 +4,14 @@ A simple Hello World project built with Nuxt 3 and Tailwind CSS.
 
 ## Features
 
-- Clean, modern design using Tailwind CSS
-- Responsive layout
-- Component-based architecture with reusable Vue components
-- Powered by Nuxt 3 framework for server-side rendering, file-based routing, and enhanced development experience
+- Built on [Nuxt 3](https://nuxt.com/) for server-side rendering, file-based routing, and enhanced developer experience
+- Clean, modern design using [Tailwind CSS](https://tailwindcss.com/) via Nuxt module integration
+- Responsive layout out of the box
+- Component-based architecture with reusable Vue 3 components
 - Hot module replacement (HMR) for instant feedback during development
-- Built-in support for composables and Vue 3 Composition API
+- Built-in support for composables and the Vue 3 Composition API
+- Easy route generation and layouts with Nuxt 3 conventions
+- Efficient development workflows tailored for Nuxt 3
 
 ## Setup
 
@@ -40,15 +42,17 @@ A simple Hello World project built with Nuxt 3 and Tailwind CSS.
 
 ## Usage Guidelines
 
-- **Pages:** Add new pages by creating `.vue` files in the `pages/` directory. Nuxt 3 automatically generates routes based on file structure.
-- **Components:** Reusable components should be placed in the `components/` directory. They can be used anywhere in your pages or layouts.
-- **Composables:** For reusable logic, add composable functions to the `composables/` directory.
-- **Layouts:** To customize the page layout, edit or add layouts in the `layouts/` directory and specify them in your page components.
-- **Configuration:** Update `nuxt.config.ts` to manage Nuxt modules, plugins, and runtime configuration.
-- **Build for Production:** To generate a production build, run:
+- **Pages:** Add new pages by creating `.vue` files in the `pages/` directory. Nuxt 3 automatically generates routes based on the file structure.
+- **Components:** Place reusable Vue components in the `components/` directory. These can be used anywhere in your pages or layouts, leveraging Nuxt 3's auto-import feature.
+- **Composables:** For reusable logic, add composable functions to the `composables/` directory. These utilize the Vue 3 Composition API and are auto-imported by Nuxt 3.
+- **Layouts:** Customize your app's structure by editing or adding layouts in the `layouts/` directory. Specify layouts in your page components with the `definePageMeta` function.
+- **Configuration:** Manage Nuxt modules, plugins, and runtime settings in `nuxt.config.ts`. Tailwind CSS is integrated as a Nuxt module, so additional Tailwind configuration can be handled here or in a separate `tailwind.config.js` file.
+- **Build for Production:** Generate and preview a production build with:
 
   ```bash
   npm run build
+  npm run preview
+  # Or for Node hosting:
   npm run start
   ```
 
@@ -73,15 +77,26 @@ A simple Hello World project built with Nuxt 3 and Tailwind CSS.
 │   └── default.vue
 ├── nuxt.config.ts
 ├── package.json
-└── pages
-    └── index.vue
+├── pages
+│   └── index.vue
+├── app.vue
+├── tailwind.config.js
+└── tsconfig.json
 ```
 
-- `components/`: Reusable Vue components
-- `composables/`: Utility functions and composables for Vue 3 Composition API
+- `components/`: Reusable Vue components (auto-imported)
+- `composables/`: Utility functions and composables for Vue 3 Composition API (auto-imported)
 - `layouts/`: Layout components for page structure
 - `pages/`: Page components mapped to routes
 - `nuxt.config.ts`: Nuxt 3 configuration file
+- `app.vue`: Root Vue component for global app structure
+- `tailwind.config.js`: Tailwind CSS configuration (if custom config is needed)
+- `tsconfig.json`: TypeScript configuration (Nuxt 3 supports TypeScript out of the box)
+
+## Configuration
+
+- **Nuxt 3 Configuration:** All Nuxt modules, plugins, and runtime configuration should be managed in `nuxt.config.ts`. Tailwind CSS is added via the Nuxt module. If you need to customize Tailwind, use `tailwind.config.js`.
+- **Environment Variables:** Place environment variables in a `.env` file or configure them in `nuxt.config.ts` under `runtimeConfig`.
 
 ## Contributing
 
